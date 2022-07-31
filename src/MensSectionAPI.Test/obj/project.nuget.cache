@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7kANtZgmnuVLEdOmodG6UpQzHdq1XI1Yot5sOb5yXty9/F36p4yr29KdpP6kyYO+y8NAPAhLgxvDy/mupsxasQ==",
+  "dgSpecHash": "y1lLz7WzdiIysUijeSPLRDL4JlIo+tYH2LAe/zKyYMQSN0echqcMGXfw8kogiSvUVJQ+KFFBEQRz7eIp4vMVjg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI.Test\\MensSectionAPI.Test.csproj",
+  "projectFilePath": "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI.Test\\MensSectionAPI.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PaulSoerensen\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\PaulSoerensen\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

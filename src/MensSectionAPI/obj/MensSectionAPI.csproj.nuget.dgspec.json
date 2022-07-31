@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI\\MensSectionAPI.csproj": {}
+    "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI\\MensSectionAPI.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI\\MensSectionAPI.csproj": {
+    "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI\\MensSectionAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI\\MensSectionAPI.csproj",
+        "projectUniqueName": "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI\\MensSectionAPI.csproj",
         "projectName": "MensSectionAPI",
-        "projectPath": "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI\\MensSectionAPI.csproj",
+        "projectPath": "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI\\MensSectionAPI.csproj",
         "packagesPath": "C:\\Users\\PaulSoerensen\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\vgcms\\MensSectionAPISln\\src\\MensSectionAPI\\obj\\",
+        "outputPath": "C:\\Projects\\vgcms\\MensSectionAPI\\src\\MensSectionAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PaulSoerensen\\AppData\\Roaming\\NuGet\\NuGet.Config",
