@@ -17,12 +17,12 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet publish src/MensSectionAPI/MensSectionAPI.csproj /p:DeployOnBuild /p:PublishProfile=FTPProfile.pubxml'
+  displayName: 'dotnet publish src/MensSectionAPI/MensSectionAPI.csproj /p:DeployOnBuild /p:PublishProfile=IISProfile.pubxml'
   inputs:
     command: publish
     publishWebProjects: false
     projects: 'src/MensSectionAPI/MensSectionAPI.csproj'
-    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:DeployOnBuild /p:PublishProfile=FTPProfile.pubxml'
+    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:DeployOnBuild /p:PublishProfile=IISProfile.pubxml'
     zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
