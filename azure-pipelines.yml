@@ -24,6 +24,3 @@ steps:
     projects: 'src/MensSectionAPI/MensSectionAPI.csproj'
     arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
     zipAfterPublish: true
-    
-- task: PublishBuildArtifacts@1
-  displayName: 'publish artifacts'
