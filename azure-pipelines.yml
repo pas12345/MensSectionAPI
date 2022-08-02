@@ -22,5 +22,5 @@ steps:
     command: publish
     publishWebProjects: false
     projects: 'src/MensSectionAPI/MensSectionAPI.csproj'
-    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
+    arguments: '/p:PublishProfile=IISProfile.pubxml /p:password=passiv'
     zipAfterPublish: true
