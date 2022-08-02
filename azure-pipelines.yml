@@ -21,8 +21,7 @@ steps:
   inputs:
     command: publish
     publishWebProjects: false
-    projects: 'src/MensSectionAPI/MensSectionAPI.csproj'
-    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml'
+     arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml'
     zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
