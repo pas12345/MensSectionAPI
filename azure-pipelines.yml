@@ -16,5 +16,14 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml'
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: 'src/MensSectionAPI/MensSectionAPI.csproj'
+    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
+    zipAfterPublish: true
+    
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
