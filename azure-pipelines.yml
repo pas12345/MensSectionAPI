@@ -27,7 +27,7 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet publish src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml'
   inputs:
-    command: msbuild
+    command: publish
     publishWebProjects: false
-    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj -c Release /p:DeployOnBuild=true /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
+    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj --framework $(dotNetFramework) /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
     zipAfterPublish: true
