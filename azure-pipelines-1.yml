@@ -42,7 +42,7 @@ steps:
     serverurl: "ftp://paulsweb.dk"
     username: "paulsweb.dk"
     password: "passiv"
-    remoteDirectory: "test.paulsweb.dk"
+    remoteDirectory: "/test"
     trustSSL: true
     cleanContents: true
     rootDirectory: $(Build.artifactstagingdirectory)
