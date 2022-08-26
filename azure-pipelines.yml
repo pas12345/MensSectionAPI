@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
   dotNetFramework: 'net6.0'
   dotNetVersion: '6.0.x'
-  targetRuntime: 'win-x64'
+  targetRuntime: 'win-x86'
 
 steps:
 - task: UseDotNet@2
@@ -23,17 +23,26 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build .NET 6 Application'
 
-# Publish it as .NET 6 self-contained application for linux runtime
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet publish src/MensSectionAPI/MensSectionAPI.csproj /p:PublishProfile=IISProfile.pubxml'
   inputs:
     command: publish
-    publishWebProjects: false
-    arguments: 'src/MensSectionAPI/MensSectionAPI.csproj --framework $(dotNetFramework) /p:PublishProfile=IISProfile.pubxml /p:password=passiv'
-    zipAfterPublish: true
-
-# Package the file and uploads them as an artifact of the build
-- task: PublishPipelineArtifact@1
+    publishWebProjects: true
+    arguments: '--configuration $(BuildConfiguration) --framework $(dotNetFramework) --runtime $(targetRuntime) --self-contained --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: false
+    
+- task: PublishBuildArtifacts@1
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'MensSectionAPI'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+
+- task: FtpUpload@2
+  displayName: "FTP upload"
+  inputs:
+    credentialsOption: inputs
+    serverurl: "ftp://paulsweb.dk"
+    username: "paulsweb.dk"
+    password: "passiv"
+    remoteDirectory: "/test"
+    trustSSL: true
+    cleanContents: true
+    rootDirectory: $(Build.artifactstagingdirectory)
