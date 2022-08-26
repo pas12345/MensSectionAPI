@@ -39,7 +39,7 @@ steps:
   displayName: "FTP upload"
   inputs:
     credentialsOption: inputs
-    serverurl: "nt7.unoeuro.com"
+    serverurl: "ftp://paulsweb.dk"
     username: "paulsweb.dk"
     password: "passiv"
     remoteDirectory: "test.paulsweb.dk"
